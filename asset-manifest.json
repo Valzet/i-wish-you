@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/i-wish-you/static/css/main.7e4ece96.css",
+    "main.js": "/i-wish-you/static/js/main.ffb8787c.js",
+    "index.html": "/i-wish-you/index.html",
+    "main.7e4ece96.css.map": "/i-wish-you/static/css/main.7e4ece96.css.map",
+    "main.ffb8787c.js.map": "/i-wish-you/static/js/main.ffb8787c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e4ece96.css",
+    "static/js/main.ffb8787c.js"
+  ]
+}
