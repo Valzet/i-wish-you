@@ -42,6 +42,19 @@
     border-radius: 5px;
 }
 
+.buttonStart {
+    border: none;
+    background-color: #821111;
+    color: white;
+    height: 20px;
+    border-radius: 5px;
+}
+
 .congratulationInput {
     padding-bottom: 14px;
+}
+
+.birthdayName {
+    display: flex;
+    flex-direction: column;
 }

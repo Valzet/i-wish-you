@@ -29,7 +29,7 @@ function BirthdayStart(props) {
             <div className={!props.isNameClicked ? "birthdayName" : 'hidden'}>
                 <p className="">Введите имя именниницы или оставьте все без изменений</p>
                 <input className='name' type='text' placeholder='именниница' onChange={handleNameChange} defaultValue='именниница'></input>
-                <button className='' type="submit" onClick={handleNextSection}>далее</button>
+                <button className='buttonStart' type="submit" onClick={handleNextSection}>далее</button>
             </div>
 
             <div className={props.isCongratulationClicked ? 'form' : 'hidden'}>
