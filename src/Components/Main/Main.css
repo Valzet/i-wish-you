@@ -1,0 +1,47 @@
+.main {
+    padding-top: 10vh;
+    flex: 1;
+    min-width: 320px;
+    max-width: 780px;
+}
+
+.hidden {
+    display: none;
+}
+
+.result {
+    padding-top: 20%;
+    font-size: 20px;
+}
+
+.name {
+    color: rgb(148 145 145);
+}
+
+.elements {
+    display: flex;
+    flex-direction: column;
+}
+
+.elements__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    border: none;
+    background-color: #821111;
+    color: white;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.congratulationInput {
+    padding-bottom: 14px;
+}
