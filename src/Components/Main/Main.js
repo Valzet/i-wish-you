@@ -6,18 +6,17 @@ import BirthdayThen from '../BirthdayThen/BirthdayThen';
 import BirthdayResult from '../BirthdayResult/BirthdayResult';
 import './Main.css';
 
-
 function Main() {
     const [BirthdayName, setBirthdayName] = useState('');
     const [isNameClicked, setIsNameClicked] = useState(false)
     const [isCongratulationClicked, setisCongratulationClicked] = useState(false)
-    const [congratulation, setCongratulation] = useState('Именниница')
+    const [congratulation, setCongratulation] = useState(null)
     const [isWishClicked, setIsWishClicked] = useState(false)
-    const [birthdayWishes, setBirthdayWishes] = useState('');
+    const [birthdayWishes, setBirthdayWishes] = useState(null);
     const [isLetClicked, setIsLetClicked] = useState(false)
-    const [birthdayLet, setBirthdayLet] = useState('');
+    const [birthdayLet, setBirthdayLet] = useState(null);
     const [isThenClicked, setIsThenClicked] = useState(false);
-    const [birthdayThen, setBirthdayThen] = useState('')
+    const [birthdayThen, setBirthdayThen] = useState(null)
     const [isResultClicked, setIsResultClicked] = useState(false)
 
     return (

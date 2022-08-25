@@ -14,7 +14,7 @@ function BirthDayLet(props) {
     }
 
     return (<div className={props.isLetClicked ? "form" : 'hidden'}>
-        <p className="">Шаг 4: будь...</p>
+        <p className="start-p">Шаг 4: будь...</p>
         {
             <ul className="elements">
                 {birthdayLet.map((birthdayLet) => {

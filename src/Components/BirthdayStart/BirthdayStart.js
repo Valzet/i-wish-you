@@ -2,10 +2,13 @@ import '../Main/Main.css'
 import { birthday } from '../../utils/birthdayStart'
 import Congratulation from '../Congratulation/Congratulation'
 
+
 function BirthdayStart(props) {
 
-    function handleNameChange(e) {
-        props.setBirthdayName(e.target.value)
+   
+
+    function handleNameChange(el) {
+        props.setBirthdayName(el.target.value)
     }
 
     function handleNextSection(e) {
@@ -16,6 +19,7 @@ function BirthdayStart(props) {
 
     function onInputClick(e) {
         props.setCongratulation(e.target.value)
+        
     }
 
     function handleNextNextSection(e) {
@@ -27,8 +31,8 @@ function BirthdayStart(props) {
     return (
         <>
             <div className={!props.isNameClicked ? "birthdayName" : 'hidden'}>
-                <p className="">Введите имя именниницы или оставьте все без изменений</p>
-                <input className='name' type='text' placeholder='именниница' onChange={handleNameChange} defaultValue='именниница'></input>
+                <p className="start-p">Введите имя именинницы или оставьте все без изменений</p>
+                <input className='name' type='text' placeholder='именинница' onChange={handleNameChange}></input>
                 <button className='buttonStart' type="submit" onClick={handleNextSection}>далее</button>
             </div>
 

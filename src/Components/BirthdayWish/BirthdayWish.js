@@ -15,7 +15,7 @@ function BirthdayWish(props) {
 
     return (
         <div className={props.isWishClicked ? "form" : 'hidden'}>
-            <p className="">Шаг 3: я желаю...</p>
+            <p className="start-p">Шаг 3: я желаю...</p>
             {
                 <ul className="elements">
                     {birthdayWish.map((birthdayWish) => {

@@ -14,7 +14,7 @@ function BirthDayThen(props) {
     }
 
     return (<div className={props.isThenClicked ? "form" : 'hidden'}>
-        <p className="">Шаг 5: и пусть..</p>
+        <p className="start-p">Шаг 5: и пусть..</p>
         {
             <ul className="elements">
                 {birthdayThen.map((birthdayThen) => {

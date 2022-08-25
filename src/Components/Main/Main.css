@@ -16,6 +16,7 @@
 
 .name {
     color: rgb(148 145 145);
+    border: none;
 }
 
 .elements {
@@ -27,6 +28,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: dashed 1px #821111;
+    margin-bottom: 8px;
 }
 
 .form {
@@ -48,13 +53,68 @@
     color: white;
     height: 20px;
     border-radius: 5px;
+    margin-top: 15px;
 }
 
-.congratulationInput {
-    padding-bottom: 14px;
-}
+
 
 .birthdayName {
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width: 900px) {
+    .main {
+        padding-left: 40px;
+        padding-right: 40px;
+
+    }
+
+}
+
+
+@media screen and (max-width: 750px) {
+    .main {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .start-p {
+        text-align: center;
+    }
+
+    .result {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main {
+        font-size: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .elements {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .main {
+        font-size: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .elements {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .result {
+        font-size: 14px;
+    }
+
+
 }
