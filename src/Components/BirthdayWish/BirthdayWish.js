@@ -1,4 +1,3 @@
-import { birthdayWish } from '../../utils/birthdayStart'
 import Congratulation from '../Congratulation/Congratulation'
 
 function BirthdayWish(props) {
@@ -7,10 +6,12 @@ function BirthdayWish(props) {
         e.preventDefault()
         props.setIsWishClicked(false)
         props.setIsLetClicked(true)
+        props.setIsDisabled(true)
     }
 
     function onInputClick(e) {
         props.setBirthdayWishes(e.target.value)
+        props.setIsDisabled(false)
     }
 
     return (
@@ -18,7 +19,7 @@ function BirthdayWish(props) {
             <p className="start-p">Шаг 3: я желаю...</p>
             {
                 <ul className="elements">
-                    {birthdayWish.map((birthdayWish) => {
+                    {props.birthday[1].map((birthdayWish) => {
                         return (<Congratulation
                             birthdayWish={birthdayWish}
                             key={birthdayWish.toString()} value={birthdayWish}
@@ -27,7 +28,7 @@ function BirthdayWish(props) {
                     }
                     )}
                 </ul>}
-            <button className='button' type="submit" onClick={handleNextSection}>далее</button>
+            <button className='button' type="submit" onClick={handleNextSection} disabled={props.checkButtonisDisabled()}>далее</button>
         </div>
     )
 }

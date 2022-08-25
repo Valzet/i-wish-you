@@ -12,6 +12,8 @@
 .result {
     padding-top: 20%;
     font-size: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .name {
@@ -47,6 +49,10 @@
     border-radius: 5px;
 }
 
+.button:disabled {
+    background-color: #444343;
+}
+
 .buttonStart {
     border: none;
     background-color: #821111;
@@ -61,6 +67,16 @@
 .birthdayName {
     display: flex;
     flex-direction: column;
+}
+
+input[type=radio] {
+    border: 0px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.start-p {
+    text-align: center;
 }
 
 @media screen and (max-width: 900px) {
@@ -79,10 +95,6 @@
         padding-right: 40px;
     }
 
-    .start-p {
-        text-align: center;
-    }
-
     .result {
         font-size: 16px;
     }
@@ -97,6 +109,13 @@
 
     .elements {
         padding: 0;
+    }
+    input[type=radio] {
+        border: 0px;
+        min-width: 15px;
+        min-height: 15px;
+        margin: 0 0 0 5px;
+        
     }
 }
 
@@ -113,7 +132,7 @@
     }
 
     .result {
-        font-size: 14px;
+        font-size: 12px;
     }
 
 

@@ -5,6 +5,7 @@ import BirthdayLet from '../BirthdayLet/BirthdayLet';
 import BirthdayThen from '../BirthdayThen/BirthdayThen';
 import BirthdayResult from '../BirthdayResult/BirthdayResult';
 import './Main.css';
+import { birthday } from '../../utils/birthdayStart'
 
 function Main() {
     const [BirthdayName, setBirthdayName] = useState('');
@@ -18,6 +19,29 @@ function Main() {
     const [isThenClicked, setIsThenClicked] = useState(false);
     const [birthdayThen, setBirthdayThen] = useState(null)
     const [isResultClicked, setIsResultClicked] = useState(false)
+    const [isDisabled, setIsDisabled] = useState(true)
+    const [isRandom, setIsRandom] = useState([])
+    const [isRandomClicked, setIsRandomClicked] = useState(false)
+
+    console.log(isRandom)
+    console.log(isRandom.length)
+    function randomCongratulation(e) {
+        e.preventDefault()
+        let random = birthday.map((cards) => {
+            let res = cards[Math.floor(cards.length * Math.random())]
+            return res
+        })
+        setIsRandom(random)
+        setIsNameClicked(true)
+        setIsRandomClicked(true)
+        
+    }
+
+    function checkButtonisDisabled() {
+        if (isDisabled) {
+            return 'disabled'
+        } else return ''
+    }
 
     return (
         <section className='main'>
@@ -30,6 +54,10 @@ function Main() {
                 congratulation={congratulation}
                 setCongratulation={setCongratulation}
                 setIsWishClicked={setIsWishClicked}
+                checkButtonisDisabled={checkButtonisDisabled}
+                setIsDisabled={setIsDisabled}
+                randomCongratulation={randomCongratulation}
+                birthday={birthday}
             ></BirthdayStart>
 
             <BirthdayWish
@@ -38,6 +66,9 @@ function Main() {
                 birthdayWishes={birthdayWishes}
                 setBirthdayWishes={setBirthdayWishes}
                 setIsLetClicked={setIsLetClicked}
+                checkButtonisDisabled={checkButtonisDisabled}
+                setIsDisabled={setIsDisabled}
+                birthday={birthday}
             >
             </BirthdayWish>
 
@@ -47,6 +78,9 @@ function Main() {
                 birthdayLet={birthdayLet}
                 setBirthdayLet={setBirthdayLet}
                 setIsThenClicked={setIsThenClicked}
+                checkButtonisDisabled={checkButtonisDisabled}
+                setIsDisabled={setIsDisabled}
+                birthday={birthday}
             >
             </BirthdayLet>
 
@@ -56,17 +90,23 @@ function Main() {
                 birthdayThen={birthdayThen}
                 setBirthdayThen={setBirthdayThen}
                 setIsResultClicked={setIsResultClicked}
+                checkButtonisDisabled={checkButtonisDisabled}
+                setIsDisabled={setIsDisabled}
+                birthday={birthday}
             >
             </BirthdayThen>
 
             <BirthdayResult
-                setIsResultClicked={setIsResultClicked}
                 BirthdayName={BirthdayName}
                 isResultClicked={isResultClicked}
+                isRandomClicked={isRandomClicked}
                 congratulation={congratulation}
                 birthdayWishes={birthdayWishes}
                 birthdayLet={birthdayLet}
                 birthdayThen={birthdayThen}
+                birthday={birthday}
+                isRandom={isRandom}
+                randomCongratulation={randomCongratulation}
             >
             </BirthdayResult>
         </section>
