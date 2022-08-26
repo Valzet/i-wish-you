@@ -49,6 +49,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+
 }
 
 .button {
@@ -59,6 +60,7 @@
     border-radius: 5px;
     width: 100%;
     margin: 5px;
+    font-size: 1em;
 }
 
 .button:disabled {
@@ -74,6 +76,7 @@
     height: 40px;
     min-width: 100%;
     margin: 15px auto 0;
+    font-size: 1em;
 }
 
 .birthdayName {

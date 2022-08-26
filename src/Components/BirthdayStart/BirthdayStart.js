@@ -14,6 +14,7 @@ function BirthdayStart(props) {
     }
 
     function onInputClick(e) {
+        console.log(e.target.value)
         props.setCongratulation(e.target.value)
         props.setIsDisabled(false)
     }
@@ -25,8 +26,6 @@ function BirthdayStart(props) {
         props.setIsDisabled(true)
     }
 
-
-
     return (
         <>
             <div className={!props.isNameClicked ? "birthdayName" : 'hidden'}>
@@ -36,7 +35,6 @@ function BirthdayStart(props) {
                 <p className="start-p">Либо выберите рандомное поздравление</p>
                 <button className='buttonStart' type="submit" onClick={props.randomCongratulation}>Рандом</button>
             </div>
-
             <div className={props.isCongratulationClicked ? 'form' : 'hidden'}>
                 <p className="start-p">Шаг 2: выберите начальное поздравление</p>
                 {
@@ -45,6 +43,7 @@ function BirthdayStart(props) {
                             return (<Congratulation
                                 birthdayWish={birthdayStart}
                                 key={birthdayStart.toString()} value={birthdayStart}
+                                id={Math.floor(Math.random() * 10000)}
                                 onInputClick={onInputClick}
                             />)
                         }

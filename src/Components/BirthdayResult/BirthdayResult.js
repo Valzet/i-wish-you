@@ -9,7 +9,6 @@ function BirthdayResult(props) {
                     <p className="result"> {result} </p>
                     <button className='button' type="submit" onClick={props.startAgain}>Попробовать еще раз</button>
                 </>
-
                 :
                 <>
                     <p className="result-text"> {randomResult}</p>
