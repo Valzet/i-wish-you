@@ -96,6 +96,11 @@
     box-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
+.span-msg {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
 
 
 input[type=radio] {
@@ -145,7 +150,10 @@ input[type=radio] {
         font-size: 14px;
         margin: 2px;
         margin-top: 6px;
-        
+    }
+
+    .span-msg {
+        font-size: 12px;
     }
 }
 

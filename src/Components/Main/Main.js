@@ -8,6 +8,7 @@ import './Main.css';
 import { birthday } from '../../utils/birthdayStart'
 
 function Main() {
+
     const [BirthdayName, setBirthdayName] = useState('');
     const [isNameClicked, setIsNameClicked] = useState(false)
     const [isCongratulationClicked, setisCongratulationClicked] = useState(false)
@@ -22,6 +23,8 @@ function Main() {
     const [isDisabled, setIsDisabled] = useState(true)
     const [isRandom, setIsRandom] = useState([])
     const [isRandomClicked, setIsRandomClicked] = useState(false)
+
+    console.log(isRandomClicked)
 
     function randomCongratulation(e) {
         e.preventDefault()
@@ -110,8 +113,7 @@ function Main() {
                 birthday={birthday}
                 isRandom={isRandom}
                 randomCongratulation={randomCongratulation}
-                startAgain={startAgain}
-            >
+                startAgain={startAgain}        >
             </BirthdayResult>
         </section>
     )
