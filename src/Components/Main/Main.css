@@ -3,6 +3,7 @@
     flex: 1;
     min-width: 320px;
     max-width: 780px;
+    margin: 0 20px;
 }
 
 .hidden {
@@ -14,6 +15,9 @@
     font-size: 20px;
     display: flex;
     flex-direction: column;
+    padding-top: 15%;
+    min-height: 160px;
+    margin: 0 20px;
 }
 
 .name {
@@ -41,12 +45,20 @@
     flex-direction: column;
 }
 
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .button {
     border: none;
     background-color: #821111;
     color: white;
     height: 40px;
     border-radius: 5px;
+    width: 100%;
+    margin: 5px;
 }
 
 .button:disabled {
@@ -59,10 +71,10 @@
     color: white;
     height: 20px;
     border-radius: 5px;
-    margin-top: 15px;
+    height: 40px;
+    min-width: 100%;
+    margin: 15px auto 0;
 }
-
-
 
 .birthdayName {
     display: flex;
@@ -77,23 +89,18 @@ input[type=radio] {
 
 .start-p {
     text-align: center;
+    margin: 15px 0 20px 0;
 }
 
 @media screen and (max-width: 900px) {
     .main {
-        padding-left: 40px;
-        padding-right: 40px;
+        margin: 0 40px;
 
     }
-
 }
 
-
 @media screen and (max-width: 750px) {
-    .main {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
+
 
     .result {
         font-size: 16px;
@@ -102,28 +109,26 @@ input[type=radio] {
 
 @media screen and (max-width: 450px) {
     .main {
-        font-size: 12px;
-        padding-left: 20px;
-        padding-right: 20px;
+        margin: 0 20px;
     }
 
     .elements {
         padding: 0;
     }
+
     input[type=radio] {
         border: 0px;
         min-width: 15px;
         min-height: 15px;
         margin: 0 0 0 5px;
-        
+
     }
 }
 
 @media screen and (max-width: 350px) {
     .main {
-        font-size: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
+        font-size: 14px;
+
     }
 
     .elements {
@@ -132,7 +137,11 @@ input[type=radio] {
     }
 
     .result {
-        font-size: 12px;
+        font-size: 14px;
+    }
+
+    .buttonStart {
+        width: 90%;
     }
 
 

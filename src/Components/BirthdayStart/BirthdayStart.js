@@ -25,7 +25,7 @@ function BirthdayStart(props) {
         props.setIsDisabled(true)
     }
 
-   
+
 
     return (
         <>

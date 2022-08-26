@@ -23,8 +23,6 @@ function Main() {
     const [isRandom, setIsRandom] = useState([])
     const [isRandomClicked, setIsRandomClicked] = useState(false)
 
-    console.log(isRandom)
-    console.log(isRandom.length)
     function randomCongratulation(e) {
         e.preventDefault()
         let random = birthday.map((cards) => {
@@ -34,13 +32,18 @@ function Main() {
         setIsRandom(random)
         setIsNameClicked(true)
         setIsRandomClicked(true)
-        
     }
 
     function checkButtonisDisabled() {
         if (isDisabled) {
             return 'disabled'
         } else return ''
+    }
+
+    function startAgain() {
+        setIsRandomClicked(false)
+        setIsResultClicked(false)
+        setIsNameClicked(false)
     }
 
     return (
@@ -107,6 +110,7 @@ function Main() {
                 birthday={birthday}
                 isRandom={isRandom}
                 randomCongratulation={randomCongratulation}
+                startAgain={startAgain}
             >
             </BirthdayResult>
         </section>
