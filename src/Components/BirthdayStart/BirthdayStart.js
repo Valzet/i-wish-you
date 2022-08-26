@@ -14,7 +14,6 @@ function BirthdayStart(props) {
     }
 
     function onInputClick(e) {
-        console.log(e.target.value)
         props.setCongratulation(e.target.value)
         props.setIsDisabled(false)
     }
@@ -43,7 +42,6 @@ function BirthdayStart(props) {
                             return (<Congratulation
                                 birthdayWish={birthdayStart}
                                 key={birthdayStart.toString()} value={birthdayStart}
-                                id={Math.floor(Math.random() * 10000)}
                                 onInputClick={onInputClick}
                             />)
                         }
