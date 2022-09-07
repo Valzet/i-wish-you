@@ -1,7 +1,6 @@
 import Congratulation from '../Congratulation/Congratulation'
 
 function BirthdayWish(props) {
-
     function handleNextSection(e) {
         e.preventDefault()
         props.setIsWishClicked(false)

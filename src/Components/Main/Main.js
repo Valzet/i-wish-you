@@ -24,8 +24,6 @@ function Main() {
     const [isRandom, setIsRandom] = useState([])
     const [isRandomClicked, setIsRandomClicked] = useState(false)
 
-    console.log(isRandomClicked)
-
     function randomCongratulation(e) {
         e.preventDefault()
         let random = birthday.map((cards) => {

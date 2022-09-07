@@ -1,13 +1,16 @@
 import '../Main/Main.css'
 import Congratulation from '../Congratulation/Congratulation'
+import { useState } from 'react'
 
 function BirthdayStart(props) {
+    const [name, setName] = useState('')
 
     function handleNameChange(el) {
-        props.setBirthdayName(el.target.value)
+        setName(el.target.value)
     }
 
     function handleNextSection(e) {
+        props.setBirthdayName(name)
         props.setIsNameClicked(true)
         e.preventDefault()
         props.setisCongratulationClicked(true)
@@ -29,10 +32,13 @@ function BirthdayStart(props) {
         <>
             <div className={!props.isNameClicked ? "birthdayName" : 'hidden'}>
                 <p className="start-p">Введите имя именинницы или оставьте все без изменений</p>
-                <input className='name' type='text' placeholder='именинница' onChange={handleNameChange}></input>
+                <input className='name' type='text'
+                    placeholder='именинница'
+                    onChange={handleNameChange}
+                ></input>
                 <button className='buttonStart' type="submit" onClick={handleNextSection}>Далее</button>
                 <p className="start-p">Либо выберите рандомное поздравление</p>
-                <button className='buttonStart' type="submit" onClick={props.randomCongratulation}>Рандом</button>
+                <button className='buttonStart' type="button" onClick={props.randomCongratulation}>Рандом</button>
             </div>
             <div className={props.isCongratulationClicked ? 'form' : 'hidden'}>
                 <p className="start-p">Шаг 2: выберите начальное поздравление</p>
